@@ -3,7 +3,7 @@
 Bir kullanicinin hesabiyla ilgili islem yapabildigi program...
 
 12253067-Algoritma ödev-1 Muhammed Ali Yaman 
-kullanici adi= a
+kullanici adi= ali
 sıfre= 1234
 
 */
@@ -20,15 +20,17 @@ void main(){
         int para=2000;   //hesap sahibinin mevcut bulunan parasi (istege baglı)
         int paraCek=0,paraY=0,gonder=0;  //paracekme ve yatirma islemlerinde kullandigim degişkenler.
                 
-        char kAdi='a';  //kullanici ismini aldigim degiskenler
+        char a,b,c;  //kullanici ismini aldigim degiskenler
         printf("Lutfen kullanici adinizi giriniz :"); 
-		scanf_s("%c",&kAdi,1);     //kullanici adini aldik
-        printf("Lutfen sifrenizi giriniz :");
-        scanf_s("%d",&sifre1);    //sifreyi aldik
+		scanf_s("%c",&a,1),scanf_s("%c",&b,1),scanf_s("%c",&c,1);     //kullanici adini aldik (tek enterla)
+        
 
-		if(sifre1==sifre && (kAdi=='a'||kAdi=='A')){ //önce sifreyi denedik sonra kullanici adini
+		if((a=='a'||a=='A')&&( b=='l'||a=='L')&& (c=='i'||c=='İ')){ //sırayla islem yapmak icin 2 if tanımladım kullanıcı adi yanlıssa sifre almadan yanlıs demek icin 
+			printf("Lutfen sifrenizi giriniz :");                        
+        scanf_s("%d",&sifre1);    //sifreyi aldik
+			if(sifre==sifre1){ //önce sifreyi denedik sonra kullanici adini
                 printf("\n\t\t\tSistemimize Hosgeldiniz ....\n\n");                                //buyuk kucuk harf hatalarını önleleyerek denedik.
-				printf("Hesabinizda %d TL bulunmaktadir sayin %c",para, kAdi);                 //önce 
+				printf("Hesabinizda %d TL bulunmaktadir sayin %c%C%C",para,a,b,c);                 //önce 
                 printf("\nLUtfen yapacaginiz islemi seciniz :\n");
 
                 printf("1 / PARA EKLE\n");
@@ -83,7 +85,10 @@ void main(){
 
         }else{
         printf("Yanlis sifre veya Kullanici adi girdiniz!!!");
-        
+        _getche();
         }
-        
+		}else{
+			printf("Yanlis sifre veya Kullanici adi girdiniz!!!");
+			_getche();
+		}
 }
