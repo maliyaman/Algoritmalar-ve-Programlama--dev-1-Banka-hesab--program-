@@ -3,7 +3,7 @@
 Bir kullanicinin hesabiyla ilgili islem yapabildigi program...
 
 12253067-Algoritma ödev-1 Muhammed Ali Yaman 
-kullanici adi= ali
+kullanici adi= a
 sıfre= 1234
 
 */
